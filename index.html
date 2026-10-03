@@ -42,14 +42,29 @@ a{color:#8d6a24}
 .wordmark{font:400 26px var(--script);color:var(--gold);text-decoration:none;letter-spacing:.02em}
 .header-note{font:400 11px var(--serif);letter-spacing:.24em;text-transform:uppercase;color:var(--sub)}
 
-/* ── 招待状カード ── */
-.hero{padding:10px 0 46px;text-align:center}
-.hero-card{position:relative;border:1px solid #d9c49a;box-shadow:0 18px 40px rgba(60,40,20,.18);background:var(--paper)}
-.hero-card img{width:100%}
-.hero-lead{font:400 12px var(--serif);letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin:0 0 14px}
-.hero-meta{margin:22px 0 0;font:400 17px/2 var(--jp);letter-spacing:.06em}
-.hero-meta strong{display:block;font:500 22px/1.6 var(--jp);letter-spacing:.08em}
-.hero-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:24px}
+/* ── 表紙 ── */
+.hero{padding:14px 0 48px}
+.paper{position:relative;background:var(--paper);border:1px solid #dcc79c;padding:40px 38px 44px;
+ box-shadow:0 20px 48px rgba(60,40,20,.14)}
+.paper:before{content:"";position:absolute;inset:7px;border:1px solid #e6d5b2;pointer-events:none}
+.orn{position:absolute;width:74px;height:84px;background:url(ornament.webp) center/contain no-repeat;opacity:.95;pointer-events:none}
+.orn.tl{left:4px;top:4px}
+.orn.tr{right:4px;top:4px;transform:scaleX(-1)}
+.orn.bl{left:4px;bottom:4px;transform:scaleY(-1)}
+.orn.br{right:4px;bottom:4px;transform:scale(-1)}
+.paper-grid{display:grid;grid-template-columns:minmax(0,38%) minmax(0,1fr);gap:26px;align-items:center}
+.hero-art{margin:0}
+.hero-art img{width:100%}
+.hero-text{text-align:center;padding-right:6px}
+.hero-lead{font:400 13px var(--serif);letter-spacing:.34em;text-transform:uppercase;color:var(--sub);margin:0 0 6px}
+.hero-names{font:400 clamp(44px,7.4vw,74px)/1.15 var(--script);color:var(--gold);margin:0;letter-spacing:.01em}
+.hero-names em{font-style:normal;color:#c08f3a}
+.hero-en{font:400 clamp(17px,2.4vw,22px) var(--serif);letter-spacing:.22em;color:var(--ink);margin:10px 0 0}
+.hero-rule{width:74px;height:1px;background:var(--gold);margin:18px auto}
+.hero-meta{margin:0;font:400 15px/2 var(--jp);letter-spacing:.06em}
+.hero-meta strong{display:block;font:500 19px/1.8 var(--jp);letter-spacing:.08em}
+.hero-meta small{display:block;font-size:14px;color:var(--sub);margin-top:4px;letter-spacing:.04em}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:26px}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 26px;
  border:1px solid var(--gold);border-radius:999px;background:transparent;color:#7d5f1f;
  font:500 14px var(--jps);letter-spacing:.12em;text-decoration:none;cursor:pointer;transition:background .25s,color .25s}
@@ -117,6 +132,8 @@ summary:after{content:"＋";float:right;color:var(--gold)}
 details[open] summary:after{content:"−"}
 details p{margin:0;padding:0 18px 16px;font:400 15px/2 var(--jp);color:var(--sub)}
 
+.scene-band{height:190px;background:url(scene.webp) center bottom/cover no-repeat;margin:0 0 -20px;
+ -webkit-mask-image:linear-gradient(#0000,#000 35%,#000 100%);mask-image:linear-gradient(#0000,#000 35%,#000 100%)}
 footer{text-align:center;padding:40px 0 56px;border-top:1px solid var(--line)}
 .foot-names{font:400 34px var(--script);color:var(--gold)}
 .foot-date{font:400 12px var(--serif);letter-spacing:.3em;color:var(--sub);margin-top:6px}
@@ -128,6 +145,13 @@ footer{text-align:center;padding:40px 0 56px;border-top:1px solid var(--line)}
 @media(prefers-reduced-motion:reduce){.rv{opacity:1!important;transform:none!important}html{scroll-behavior:auto}}
 @media print{.rv{opacity:1!important;transform:none!important}.btn,.submit{display:none}}
 
+@media(max-width:860px){
+ .paper{padding:30px 20px 34px}
+ .paper-grid{grid-template-columns:1fr;gap:18px}
+ .hero-art{order:2;max-width:330px;margin:0 auto}
+ .hero-text{order:1;padding:0}
+ .orn{width:54px;height:62px}
+}
 @media(max-width:600px){
  .section{padding:42px 0}
  .hero-meta{font-size:15px}
@@ -136,15 +160,19 @@ footer{text-align:center;padding:40px 0 56px;border-top:1px solid var(--line)}
 }
 
 /* ── 読み込みのとき、そっと現れる ── */
-.js-in .hero-lead{animation:soft-up .9s ease .15s both}
-.js-in .hero-card{animation:card-in 1.25s cubic-bezier(.2,.7,.25,1) .1s both}
-.js-in .hero-meta{animation:soft-up 1s ease .75s both}
-.js-in .hero-actions{animation:soft-up 1s ease .95s both}
+.js-in .paper{animation:card-in 1.2s cubic-bezier(.2,.7,.25,1) .05s both}
+.js-in .hero-art{animation:soft-up 1.1s ease .35s both}
+.js-in .hero-lead{animation:soft-up .9s ease .5s both}
+.js-in .hero-names{animation:soft-up 1s ease .65s both}
+.js-in .hero-en{animation:soft-up 1s ease .85s both}
+.js-in .hero-rule{animation:rule-grow .9s ease 1s both}
+.js-in .hero-meta{animation:soft-up 1s ease 1.1s both}
+.js-in .hero-actions{animation:soft-up 1s ease 1.3s both}
+@keyframes rule-grow{from{opacity:0;width:0}to{opacity:1;width:74px}}
 .js-in .page-header{animation:soft-up .9s ease .05s both}
 @keyframes soft-up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 @keyframes card-in{from{opacity:0;transform:translateY(34px) scale(.985)}to{opacity:1;transform:none}}
-.hero-card{transition:transform .9s cubic-bezier(.2,.7,.25,1),box-shadow .9s ease}
-.hero-card:hover{transform:translateY(-4px);box-shadow:0 26px 54px rgba(60,40,20,.22)}
+.paper{transition:transform .9s cubic-bezier(.2,.7,.25,1),box-shadow .9s ease}
 
 /* ── 紅葉がゆっくり舞う ── */
 .leaves{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
@@ -165,9 +193,10 @@ main,.page-header,footer{position:relative;z-index:1}
 .rv.in .section-ja:after,.section-top.in .section-ja:after{width:44px;transform:translateX(-50%)}
 
 @media(prefers-reduced-motion:reduce){
- .js-in .hero-lead,.js-in .hero-card,.js-in .hero-meta,.js-in .hero-actions,.js-in .page-header{animation:none!important}
+ .js-in .paper,.js-in .hero-art,.js-in .hero-lead,.js-in .hero-names,.js-in .hero-en,.js-in .hero-rule,.js-in .hero-meta,.js-in .hero-actions,.js-in .page-header{animation:none!important}
+ .hero-rule{width:74px}
  .leaves{display:none}
- .hero-card{transition:none}
+ .paper{transition:none}
 }
 @media print{.leaves{display:none}}
 </style>
@@ -182,13 +211,26 @@ main,.page-header,footer{position:relative;z-index:1}
 <main id="main">
 <section class="hero">
  <div class="wrap">
-  <p class="hero-lead">Wedding Invitation</p>
-  <div class="hero-card"><img src="card.webp" width="1400" height="946" fetchpriority="high"
-   alt="Wedding Invitation Seika &amp; Mari 2026.11.18 WED／Northern Horse Park／Deard Buena Vista 18:30 Start と記された、馬の水彩画の招待状"></div>
-  <p class="hero-meta"><strong>2026年11月18日（水）午後6時30分 開宴</strong>ノーザンホースパーク　Deard Buena Vista</p>
-  <div class="hero-actions">
-   <a class="btn primary" href="#rsvp">ご出欠のお返事</a>
-   <a class="btn" href="#venue">会場・送迎バス</a>
+  <div class="paper">
+   <span class="orn tl" aria-hidden="true"></span><span class="orn tr" aria-hidden="true"></span>
+   <span class="orn bl" aria-hidden="true"></span><span class="orn br" aria-hidden="true"></span>
+   <div class="paper-grid">
+    <figure class="hero-art">
+     <img src="horse.webp" width="470" height="810" fetchpriority="high"
+      alt="紅葉の下で引き手に寄り添う栗毛の馬の水彩画">
+    </figure>
+    <div class="hero-text">
+     <p class="hero-lead">Wedding Invitation</p>
+     <h1 class="hero-names">Seika <em>&amp;</em> Mari</h1>
+     <p class="hero-en">2026 . 11 . 18 &nbsp;WED</p>
+     <div class="hero-rule" aria-hidden="true"></div>
+     <p class="hero-meta"><strong>2026年11月18日（水）</strong>午後6時30分 開宴<small>ノーザンホースパーク　Deard Buena Vista</small></p>
+     <div class="hero-actions">
+      <a class="btn primary" href="#rsvp">ご出欠のお返事</a>
+      <a class="btn" href="#venue">会場・送迎バス</a>
+     </div>
+    </div>
+   </div>
   </div>
   <p class="countdown rv">結婚のお祝いの会まで <strong data-countdown>—</strong> 日</p>
  </div>
@@ -283,6 +325,7 @@ main,.page-header,footer{position:relative;z-index:1}
  </div>
 </section>
 
+<div class="scene-band rv" aria-hidden="true"></div>
 <section class="section" id="information">
  <div class="wrap">
   <div class="section-top rv"><span class="section-en">Information</span><span class="section-ja">ご案内</span></div>
@@ -339,7 +382,7 @@ document.documentElement.classList.add('js-in');
 /* ── 招待状のゆるやかな視差（パソコンのみ） ── */
 (function(){
  if(matchMedia('(prefers-reduced-motion: reduce)').matches || innerWidth < 900) return;
- const card = document.querySelector('.hero-card'); if(!card) return;
+ const card = document.querySelector('.paper'); if(!card) return;
  let ticking = false;
  addEventListener('scroll', () => {
   if(ticking) return; ticking = true;
