@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Seika &amp; Mari — Hokkaido Wedding Party</title>
+<meta name="description" content="鈴木 聖佳・小野瀬 茉里 結婚のお祝いの会。2026年11月18日（水）18:30 Start／Deard Buena Vista（ノーザンホースパーク内）。ご出欠・送迎バスのお返事はこちらから。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://seika-mari-wedding.github.io/hokkaido/">
+<meta property="og:title" content="Seika &amp; Mari — お祝いの会のご案内">
+<meta property="og:description" content="2026年11月18日（水）18:30 Start／Deard Buena Vista（ノーザンホースパーク内）">
+<meta property="og:image" content="https://seika-mari-wedding.github.io/hokkaido/ogp.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f7f1e6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Pinyon+Script&family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+ --cream:#f7f1e6; --paper:#fffaf2; --ink:#3b3228; --sub:#6d6253;
+ --gold:#a8822f; --gold-soft:#c7a763;
+ --leaf:#b4542a; --line:#e2d6c0;
+ --serif:'Cormorant Garamond',Georgia,serif;
+ --script:'Pinyon Script',cursive;
+ --jp:'Noto Serif JP',serif;
+ --jps:'Noto Sans JP',sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 16px/1.95 var(--jps);
+ background-image:radial-gradient(circle at 12% 8%,#f3e4cf 0,rgba(243,228,207,0) 42%),radial-gradient(circle at 88% 18%,#f1e2cd 0,rgba(241,226,205,0) 38%);
+ background-attachment:fixed}
+img{max-width:100%;height:auto;display:block}
+a{color:#8d6a24}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:12px;top:12px;background:#fff;padding:10px 14px;z-index:20;border:1px solid var(--gold)}
+.wrap{width:min(100% - 36px,760px);margin-inline:auto}
+.page-header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0 6px}
+.wordmark{font:400 26px var(--script);color:var(--gold);text-decoration:none;letter-spacing:.02em}
+.header-note{font:400 11px var(--serif);letter-spacing:.24em;text-transform:uppercase;color:var(--sub)}
+
+/* ── 招待状カード ── */
+.hero{padding:10px 0 46px;text-align:center}
+.hero-card{position:relative;border:1px solid #d9c49a;box-shadow:0 18px 40px rgba(60,40,20,.18);background:var(--paper)}
+.hero-card img{width:100%}
+.hero-lead{font:400 12px var(--serif);letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin:0 0 14px}
+.hero-meta{margin:22px 0 0;font:400 17px/2 var(--jp);letter-spacing:.06em}
+.hero-meta strong{display:block;font:500 22px/1.6 var(--jp);letter-spacing:.08em}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 26px;
+ border:1px solid var(--gold);border-radius:999px;background:transparent;color:#7d5f1f;
+ font:500 14px var(--jps);letter-spacing:.12em;text-decoration:none;cursor:pointer;transition:background .25s,color .25s}
+.btn:hover{background:var(--gold);color:#fff}
+.btn.primary{background:var(--gold);color:#fff}
+.btn.primary:hover{background:#8d6a24;border-color:#8d6a24}
+
+/* ── セクション ── */
+.section{padding:52px 0}
+.section + .section{border-top:1px solid var(--line)}
+.section-top{text-align:center;margin-bottom:30px}
+.section-en{display:block;font:400 11px var(--serif);letter-spacing:.34em;text-transform:uppercase;color:var(--gold)}
+.section-ja{display:block;font:500 21px/1.7 var(--jp);letter-spacing:.14em;margin-top:6px}
+.lead{font:400 15px/2.3 var(--jp);letter-spacing:.04em;text-align:center;margin:0 0 18px}
+.sign{text-align:center;font:400 15px/2.2 var(--jp);letter-spacing:.1em;margin-top:26px;color:var(--sub)}
+.sign em{display:block;font:400 30px var(--script);color:var(--gold);font-style:normal;margin-top:8px}
+
+.facts{display:grid;gap:14px;margin:0}
+.facts div{background:var(--paper);border:1px solid var(--line);padding:18px 20px}
+.facts dt{font:400 11px var(--serif);letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.facts dd{margin:0;font:400 16px/1.95 var(--jp);letter-spacing:.04em}
+.facts dd b{font-weight:500}
+.facts dd small{display:block;font-size:13px;color:var(--sub);letter-spacing:.02em}
+.map{margin-top:20px;border:1px solid var(--line);background:var(--paper)}
+.map iframe{width:100%;height:320px;border:0;display:block}
+.countdown{text-align:center;font:400 14px var(--jp);letter-spacing:.1em;color:var(--sub);margin-top:22px}
+.countdown strong{font:500 30px var(--serif);color:var(--gold);letter-spacing:.04em;margin:0 6px}
+
+.bus{display:grid;gap:12px;margin-top:8px}
+.bus li{list-style:none;background:var(--paper);border:1px solid var(--line);padding:14px 18px;
+ font:400 16px/1.8 var(--jp);letter-spacing:.06em;display:flex;align-items:center;gap:12px}
+.bus li:before{content:"";width:9px;height:9px;border:1px solid var(--gold);transform:rotate(45deg);flex:none}
+.note{font:400 13px/2 var(--jp);color:var(--sub);letter-spacing:.02em;margin:14px 0 0}
+
+/* ── お返事 ── */
+.form{background:var(--paper);border:1px solid var(--line);padding:26px 22px}
+.field{margin-bottom:20px}
+.field-label{display:block;font:500 13px var(--jps);letter-spacing:.12em;margin-bottom:8px}
+.req{color:var(--leaf);font-size:11px;margin-left:8px;letter-spacing:.1em}
+input[type=text],input[type=email],input[type=tel],textarea{
+ width:100%;padding:13px 14px;border:1px solid #d8cbb2;background:#fff;color:var(--ink);
+ font:400 16px/1.7 var(--jps);border-radius:2px}
+textarea{min-height:104px;resize:vertical}
+input:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
+.choices{display:flex;flex-wrap:wrap;gap:10px}
+.choices label{flex:1 1 150px;display:flex;align-items:center;gap:10px;padding:13px 16px;
+ border:1px solid #d8cbb2;background:#fff;cursor:pointer;font:400 15px var(--jp);letter-spacing:.06em}
+.choices input{accent-color:var(--gold);width:18px;height:18px}
+.choices label:has(input:checked){border-color:var(--gold);background:#fdf7ec}
+.form-notice,.privacy{font:400 13px/2 var(--jp);color:var(--sub);margin:0 0 18px}
+.privacy{margin:18px 0 0}
+.submit{width:100%;min-height:54px;border:0;border-radius:999px;background:var(--gold);color:#fff;
+ font:500 15px var(--jps);letter-spacing:.14em;cursor:pointer}
+.submit:disabled{background:#cfc2a8;cursor:not-allowed}
+.submit:hover:not(:disabled){background:#8d6a24}
+.form-status{font:400 14px var(--jp);color:var(--leaf);margin:14px 0 0;min-height:1.6em}
+.field-hint{font:400 12px/1.7 var(--jps);color:var(--sub);margin:6px 0 0}
+
+details{background:var(--paper);border:1px solid var(--line);margin-bottom:10px}
+summary{cursor:pointer;padding:15px 18px;font:500 15px var(--jp);letter-spacing:.08em;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"＋";float:right;color:var(--gold)}
+details[open] summary:after{content:"−"}
+details p{margin:0;padding:0 18px 16px;font:400 15px/2 var(--jp);color:var(--sub)}
+
+footer{text-align:center;padding:40px 0 56px;border-top:1px solid var(--line)}
+.foot-names{font:400 34px var(--script);color:var(--gold)}
+.foot-date{font:400 12px var(--serif);letter-spacing:.3em;color:var(--sub);margin-top:6px}
+
+/* 出てくる動き */
+.rv{opacity:0;transform:translateY(16px)}
+.js-rv .rv{transition:opacity .8s ease var(--d,0ms),transform .8s cubic-bezier(.2,.7,.25,1) var(--d,0ms)}
+.js-rv .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1!important;transform:none!important}html{scroll-behavior:auto}}
+@media print{.rv{opacity:1!important;transform:none!important}.btn,.submit{display:none}}
+
+@media(max-width:600px){
+ .section{padding:42px 0}
+ .hero-meta{font-size:15px}
+ .hero-meta strong{font-size:19px}
+ .map iframe{height:260px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">本文へスキップ</a>
+<div class="wrap">
+ <header class="page-header"><a class="wordmark" href="#" aria-label="ページの先頭へ">Seika &amp; Mari</a><span class="header-note">Hokkaido · 18 Nov 2026</span></header>
+</div>
+
+<main id="main">
+<section class="hero">
+ <div class="wrap">
+  <p class="hero-lead">Wedding Invitation</p>
+  <div class="hero-card"><img src="card.webp" width="1400" height="946" fetchpriority="high"
+   alt="Wedding Invitation Seika &amp; Mari 2026.11.18 WED／Northern Horse Park／Deard Buena Vista 18:30 Start と記された、馬の水彩画の招待状"></div>
+  <p class="hero-meta"><strong>2026年11月18日（水）18:30 Start</strong>Deard Buena Vista（ノーザンホースパーク内）</p>
+  <div class="hero-actions">
+   <a class="btn primary" href="#rsvp">ご出欠のお返事</a>
+   <a class="btn" href="#venue">会場・送迎バス</a>
+  </div>
+  <p class="countdown rv">結婚のお祝いの会まで <strong data-countdown>—</strong> 日</p>
+ </div>
+</section>
+
+<section class="section" id="greeting">
+ <div class="wrap">
+  <div class="section-top rv"><span class="section-en">Message</span><span class="section-ja">ごあいさつ</span></div>
+  <p class="lead rv">このたび 私たちは結婚式を挙げることとなりました</p>
+  <p class="lead rv">日ごろお世話になっております皆さまに<br>感謝の気持ちをお伝えしたく<br>ささやかではございますが お祝いの席をご用意いたしました</p>
+  <p class="lead rv">ご多用のところ恐縮ではございますが<br>ぜひお気軽にお越しいただけましたら幸いです</p>
+  <p class="sign rv">鈴木 聖佳 ・ 小野瀬 茉里<em>Seika &amp; Mari</em></p>
+ </div>
+</section>
+
+<section class="section" id="venue">
+ <div class="wrap">
+  <div class="section-top rv"><span class="section-en">Date &amp; Place</span><span class="section-ja">日時・会場</span></div>
+  <dl class="facts">
+   <div class="rv"><dt>Date</dt><dd><b>2026年11月18日（水）</b><small>18:30 Start</small></dd></div>
+   <div class="rv"><dt>Place</dt><dd><b>Deard Buena Vista</b><small>ノーザンホースパーク内（北海道苫小牧市美沢114-7）</small></dd></div>
+  </dl>
+  <div class="map rv">
+   <iframe title="ノーザンホースパーク周辺のGoogleマップ" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+    src="https://www.google.com/maps?q=%E3%83%8E%E3%83%BC%E3%82%B6%E3%83%B3%E3%83%9B%E3%83%BC%E3%82%B9%E3%83%91%E3%83%BC%E3%82%AF&output=embed"></iframe>
+  </div>
+  <p class="note rv">新千歳空港から車でおよそ15分です。お車でお越しの方は、ノーザンホースパークの駐車場をご利用ください。</p>
+ </div>
+</section>
+
+<section class="section" id="bus">
+ <div class="wrap">
+  <div class="section-top rv"><span class="section-en">Shuttle Bus</span><span class="section-ja">送迎バス</span></div>
+  <p class="lead rv">下記の3か所から送迎バスが出る予定です</p>
+  <ul class="bus">
+   <li class="rv">千歳駅</li>
+   <li class="rv">沼ノ端駅</li>
+   <li class="rv">ローソン遠浅店</li>
+  </ul>
+  <p class="note rv">ご利用を希望される方は、お返事の際に乗車場所をお知らせください。乗車場所の詳細と集合時間につきましては、追ってご案内いたします。</p>
+ </div>
+</section>
+
+<section class="section" id="rsvp">
+ <div class="wrap">
+  <div class="section-top rv"><span class="section-en">R.S.V.P.</span><span class="section-ja">ご出欠のお返事</span></div>
+  <p class="form-notice rv" id="form-notice">ただいま受付の準備中です。いましばらくお待ちください。</p>
+  <form class="form rv" id="rsvp-form" novalidate>
+   <div class="field">
+    <span class="field-label">ご出欠<span class="req">必須</span></span>
+    <div class="choices">
+     <label><input type="radio" name="attend" value="ご出席" required>ご出席</label>
+     <label><input type="radio" name="attend" value="ご欠席">ご欠席</label>
+    </div>
+   </div>
+   <div class="field"><label class="field-label" for="guest-name">お名前<span class="req">必須</span></label>
+    <input id="guest-name" name="name" type="text" autocomplete="name" placeholder="鈴木 聖佳" maxlength="60" required></div>
+   <div class="field"><label class="field-label" for="guest-kana">ふりがな<span class="req">必須</span></label>
+    <input id="guest-kana" name="kana" type="text" placeholder="すずき せいか" maxlength="60" required></div>
+   <div class="field"><label class="field-label" for="guest-email">メールアドレス<span class="req">必須</span></label>
+    <input id="guest-email" name="email" type="email" autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false" placeholder="mail@example.com" maxlength="254" required>
+    <p class="field-hint">ご入力のアドレスへ、お返事の控えが自動で届きます。</p></div>
+   <div class="field">
+    <span class="field-label">送迎バス<span class="req">必須</span></span>
+    <div class="choices">
+     <label><input type="radio" name="bus" value="希望する" required>希望する</label>
+     <label><input type="radio" name="bus" value="希望しない">希望しない</label>
+    </div>
+   </div>
+   <div class="field">
+    <span class="field-label">乗車場所</span>
+    <div class="choices">
+     <label><input type="radio" name="stop" value="千歳駅">千歳駅</label>
+     <label><input type="radio" name="stop" value="沼ノ端駅">沼ノ端駅</label>
+     <label><input type="radio" name="stop" value="ローソン遠浅店">ローソン遠浅店</label>
+    </div>
+    <p class="field-hint">送迎バスをご希望の方のみご記入ください。</p>
+   </div>
+   <div class="field"><label class="field-label" for="guest-allergy">アレルギー・お食事のご要望</label>
+    <textarea id="guest-allergy" name="allergy" placeholder="該当する方のお名前と内容をご記入ください" maxlength="2000"></textarea></div>
+   <div class="field"><label class="field-label" for="guest-message">おふたりへのメッセージ</label>
+    <textarea id="guest-message" name="message" placeholder="ひとこと添えていただけましたら幸いです" maxlength="3000"></textarea></div>
+   <p class="privacy">ご回答は出欠確認と当日の準備・ご連絡に使用いたします。</p>
+   <button type="submit" class="submit" id="submit-button" disabled>受付準備中</button>
+   <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+  </form>
+ </div>
+</section>
+
+<section class="section" id="information">
+ <div class="wrap">
+  <div class="section-top rv"><span class="section-en">Information</span><span class="section-ja">ご案内</span></div>
+  <details class="rv"><summary>お車でお越しの方へ</summary><p>ノーザンホースパークの駐車場をご利用いただけます。お飲みになる方は、送迎バスまたは代行・タクシーのご利用をお願いいたします。</p></details>
+  <details class="rv"><summary>お子様とご一緒の方へ</summary><p>お子様もご一緒にお越しいただけます。人数とお子様の年齢を、お返事のメッセージ欄にご記入ください。</p></details>
+  <details class="rv"><summary>お問い合わせ</summary><p>ご不明な点がございましたら、お手数ですが新郎新婦までご連絡ください。</p></details>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <p class="foot-names">Seika &amp; Mari</p>
+  <p class="foot-date">18 . 11 . 2026 — Deard Buena Vista</p>
+ </div>
+</footer>
+
+<script>
+const $ = (s) => document.querySelector(s);
+const PARTY_AT = '2026-11-18T18:30:00+09:00';
+// Googleフォームの送り先。entry番号を入れると受付が始まる
+const GOOGLE_FORM = {
+ action: 'https://docs.google.com/forms/d/e/1FAIpQLSeanApV7x1utXXgvAMtdkTuCDeiYLzmvRvNR7hqlTkmO3t4WQ/formResponse',
+ emailParam: 'emailAddress',   // Googleフォーム標準のメール欄。控えの自動返信に使われる
+ entries: {attend:'entry.245817720', name:'entry.1949258207', kana:'entry.1314420979',
+           bus:'entry.1193506819', stop:'entry.805982403',
+           allergy:'entry.76055201', message:'entry.515967251'}
+};
+
+/* ── あと何日 ── */
+(function(){
+ const el = document.querySelector('[data-countdown]'); if(!el) return;
+ const days = Math.max(0, Math.ceil((new Date(PARTY_AT) - new Date()) / 86400000));
+ el.textContent = days;
+})();
+
+/* ── スクロールで出てくる ── */
+(function(){
+ if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+ document.documentElement.classList.add('js-rv');
+ const items = [...document.querySelectorAll('.rv')];
+ items.forEach((el,i)=>{ if(el.parentElement.classList.contains('bus')||el.parentElement.classList.contains('facts')) el.style.setProperty('--d', Math.min(i,4)*70+'ms'); });
+ let tid = 0;
+ function reveal(){
+  const line = innerHeight * 0.92;
+  for(let i=items.length-1;i>=0;i--){
+   if(items[i].getBoundingClientRect().top < line){ items[i].classList.add('in'); items.splice(i,1); }
+  }
+  if(!items.length){ removeEventListener('scroll',onScroll); removeEventListener('resize',reveal); }
+ }
+ function onScroll(){ clearTimeout(tid); tid = setTimeout(reveal, 60); reveal(); }
+ addEventListener('scroll', onScroll, {passive:true});
+ addEventListener('resize', reveal);
+ addEventListener('load', reveal);
+ reveal();
+ setTimeout(()=>{ if(items.length) reveal(); }, 2500);   // 念のための保険
+})();
+
+/* ── お返事（Googleフォームへ引き継ぐ） ── */
+function googleFormUrl(){
+ try{
+  const u = new URL(GOOGLE_FORM.action);
+  if(u.origin !== 'https://docs.google.com' || !/^\/forms\/d\/(?:e\/)?[a-zA-Z0-9_-]+\/(?:formResponse|viewform)$/.test(u.pathname)) return null;
+  const keys = ['attend','name','kana','bus','stop','allergy','message'];
+  const ids = keys.map(k => GOOGLE_FORM.entries[k]);
+  if(ids.some(id => !/^entry\.\d+$/.test(id)) || new Set(ids).size !== keys.length) return null;
+  u.pathname = u.pathname.replace(/formResponse$/,'viewform'); u.search=''; u.hash='';
+  return u;
+ }catch{ return null; }
+}
+const formURL = googleFormUrl();
+if(formURL){
+ $('#form-notice').textContent = '入力後、Googleフォームへ進んで内容を確認し、送信してください。ご入力のメールアドレスへ、お返事の控えが自動で届きます。';
+ $('#submit-button').disabled = false;
+ $('#submit-button').textContent = 'Googleフォームで確認・送信';
+}
+$('#rsvp-form').addEventListener('submit', event => {
+ event.preventDefault();
+ if(!formURL){ $('#form-status').textContent = '現在、受付準備中です。回答は送信されていません。'; return; }
+ const form = event.currentTarget;
+ for(const name of ['name','kana','email','allergy','message']){
+  const input = form.elements.namedItem(name); input.value = input.value.trim();
+ }
+ if(!form.reportValidity()) return;
+ const values = new FormData(form);
+ const url = new URL(formURL);
+ url.searchParams.set('usp','pp_url');
+ for(const [key,id] of Object.entries(GOOGLE_FORM.entries)){ url.searchParams.set(id, String(values.get(key)||'')); }
+ if(GOOGLE_FORM.emailParam) url.searchParams.set(GOOGLE_FORM.emailParam, String(values.get('email')||''));
+ $('#form-status').textContent = 'Googleフォームを開きます。内容をご確認のうえ送信してください。';
+ location.assign(url.toString());
+});
+</script>
+</body>
+</html>
