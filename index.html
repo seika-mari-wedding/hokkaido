@@ -20,8 +20,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Pinyon+Script&family=Shippori+Mincho:wght@400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root{
- --paper:#f6f1e8; --paper-2:#fbf8f2; --ink:#2c2824; --sub:#766c5e;
- --gold:#9c7c3f; --rust:#a9552c; --line:#ddd0b9;
+ --paper:#f7efe0; --paper-2:#fdf8ee; --ink:#33291f; --sub:#7b6a54;
+ --gold:#9c7430; --rust:#a9502a; --amber:#c8863a; --line:#e0cfb2;
  --serif:'Cormorant Garamond',Georgia,serif;
  --script:'Pinyon Script',cursive;
  --jp:'Shippori Mincho',serif;
@@ -30,7 +30,13 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--paper);color:var(--ink);font:300 16px/2.05 var(--jps)}
+body{margin:0;color:var(--ink);font:300 16px/2.05 var(--jps);
+ background:
+  radial-gradient(1100px 620px at 8% -4%,rgba(201,124,53,.16),rgba(201,124,53,0) 62%),
+  radial-gradient(900px 560px at 98% 12%,rgba(168,74,34,.12),rgba(168,74,34,0) 60%),
+  radial-gradient(900px 700px at 50% 108%,rgba(138,106,40,.14),rgba(138,106,40,0) 64%),
+  var(--paper);
+ background-attachment:fixed}
 img{max-width:100%;height:auto;display:block}
 a{color:var(--gold)}
 h1,h2,h3,p,dl,dd,figure{margin:0}
@@ -100,6 +106,16 @@ h1,h2,h3,p,dl,dd,figure{margin:0}
 .names-jp{margin-top:14px;text-align:center;font:400 clamp(17px,2.2vw,21px) var(--jp);letter-spacing:.34em}
 .names-en{margin-top:4px;text-align:center;font:400 30px var(--script);color:var(--gold)}
 
+/* ── 招待状らしい額 ── */
+.card{position:relative;background:var(--paper-2);border:1px solid var(--line);
+ padding:clamp(44px,7vw,78px) clamp(24px,5vw,56px);box-shadow:0 24px 60px rgba(90,56,22,.1)}
+.card:before{content:"";position:absolute;inset:9px;border:1px solid #ecdcc0;pointer-events:none}
+.orn{position:absolute;width:62px;height:70px;background:url(ornament.webp) center/contain no-repeat;opacity:.9;pointer-events:none}
+.orn.tl{left:6px;top:6px}
+.orn.tr{right:6px;top:6px;transform:scaleX(-1)}
+.orn.bl{left:6px;bottom:6px;transform:scaleY(-1)}
+.orn.br{right:6px;bottom:6px;transform:scale(-1)}
+
 .facts{display:grid;gap:0;border-top:1px solid var(--line)}
 .facts > div{display:grid;grid-template-columns:150px 1fr;gap:12px 28px;padding:24px 4px;border-bottom:1px solid var(--line)}
 .facts dt{font:300 10px var(--jps);letter-spacing:.42em;text-transform:uppercase;color:var(--gold);padding-top:9px}
@@ -113,6 +129,12 @@ h1,h2,h3,p,dl,dd,figure{margin:0}
 .stops li{list-style:none;background:var(--paper);padding:30px 18px;text-align:center}
 .stops b{display:block;font:400 clamp(17px,2vw,20px) var(--jp);letter-spacing:.14em}
 .stops span{display:block;margin-top:8px;font:300 10px var(--jps);letter-spacing:.34em;text-transform:uppercase;color:var(--sub)}
+
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(12px,2vw,22px)}
+.gallery figure{margin:0;overflow:hidden;background:#efe4d2;border:1px solid var(--line)}
+.gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform 1.4s cubic-bezier(.19,1,.22,1)}
+.gallery figure:hover img{transform:scale(1.045)}
+.gallery .g-wide img{aspect-ratio:4/3}
 
 .band{height:clamp(170px,26vw,280px);background:url(scene.webp) center 72%/cover no-repeat;
  -webkit-mask-image:linear-gradient(#0000,#000 38%,#000 76%,#0000);mask-image:linear-gradient(#0000,#000 38%,#000 76%,#0000)}
@@ -185,6 +207,9 @@ footer{padding:clamp(60px,9vw,96px) 0 clamp(50px,7vw,80px);text-align:center}
  .facts > div{grid-template-columns:1fr;gap:6px;padding:20px 2px}
  .facts dt{padding-top:0}
  .stops{grid-template-columns:1fr}
+ .gallery{grid-template-columns:1fr}
+ .card{padding:34px 20px}
+ .orn{width:46px;height:52px}
  .letter{font-size:14.5px;line-height:2.5;letter-spacing:.04em}
  .letter br{display:none}
 }
@@ -229,6 +254,9 @@ footer{padding:clamp(60px,9vw,96px) 0 clamp(50px,7vw,80px);text-align:center}
 
 <section class="section" id="greeting">
  <div class="narrow">
+  <div class="card rv">
+   <span class="orn tl" aria-hidden="true"></span><span class="orn tr" aria-hidden="true"></span>
+   <span class="orn bl" aria-hidden="true"></span><span class="orn br" aria-hidden="true"></span>
   <div class="sec-head rv"><span class="sec-no">01</span><span class="sec-en">Message</span><i class="sec-line"></i></div>
   <p class="letter rv">すがすがしい秋日和がつづいております<br>
    このたび 私たちは結婚式を挙げることになりました<br>
@@ -239,6 +267,7 @@ footer{padding:clamp(60px,9vw,96px) 0 clamp(50px,7vw,80px);text-align:center}
   <p class="letter-date rv">2026年10月吉日</p>
   <p class="names-jp rv">鈴木 聖佳　小野瀬 茉里</p>
   <p class="names-en rv">Seika &amp; Mari</p>
+  </div>
  </div>
 </section>
 
@@ -276,9 +305,21 @@ footer{padding:clamp(60px,9vw,96px) 0 clamp(50px,7vw,80px);text-align:center}
  <p class="count rv"><strong data-countdown>—</strong>Days to go</p>
 </section>
 
+<section class="section" id="gallery">
+ <div class="wrap">
+  <div class="sec-head rv"><span class="sec-no">04</span><span class="sec-en">Gallery</span><i class="sec-line"></i><h2 class="sec-ja">思い出の一枚</h2></div>
+  <div class="gallery">
+   <figure class="rv g-wide"><img src="race1.webp" width="1280" height="960" loading="lazy" alt="先頭で競り合う馬群を描いた水彩画"></figure>
+   <figure class="rv"><img src="race2.webp" width="1280" height="720" loading="lazy" alt="直線を独走する栗毛の馬の水彩画"></figure>
+   <figure class="rv"><img src="race3.webp" width="1280" height="720" loading="lazy" alt="ゴール後に天を指す騎手の水彩画"></figure>
+   <figure class="rv g-wide"><img src="race4.webp" width="1280" height="960" loading="lazy" alt="秋の芝コースを駆け抜ける馬群の水彩画"></figure>
+  </div>
+ </div>
+</section>
+
 <section class="section rsvp" id="rsvp">
  <div class="narrow">
-  <div class="sec-head rv"><span class="sec-no">04</span><span class="sec-en">R.S.V.P.</span><i class="sec-line"></i><h2 class="sec-ja">ご出欠のお返事</h2></div>
+  <div class="sec-head rv"><span class="sec-no">05</span><span class="sec-en">R.S.V.P.</span><i class="sec-line"></i><h2 class="sec-ja">ご出欠のお返事</h2></div>
   <p class="deadline rv">お手数ながらご都合の程を<br><b>2026年10月20日（火）</b>までにお知らせくださいますようお願い申し上げます</p>
   <p class="form-notice rv" id="form-notice">ただいま受付の準備中です。いましばらくお待ちください。</p>
   <form id="rsvp-form" class="rv" novalidate>
@@ -325,7 +366,7 @@ footer{padding:clamp(60px,9vw,96px) 0 clamp(50px,7vw,80px);text-align:center}
 
 <section class="section" id="information">
  <div class="narrow">
-  <div class="sec-head rv"><span class="sec-no">05</span><span class="sec-en">Information</span><i class="sec-line"></i><h2 class="sec-ja">ご案内</h2></div>
+  <div class="sec-head rv"><span class="sec-no">06</span><span class="sec-en">Information</span><i class="sec-line"></i><h2 class="sec-ja">ご案内</h2></div>
   <details class="rv"><summary>お車でお越しの方へ</summary><p>ノーザンホースパークの駐車場をご利用いただけます。お飲みになる方は、送迎バスまたは代行・タクシーのご利用をお願いいたします。</p></details>
   <details class="rv"><summary>お子様とご一緒の方へ</summary><p>お子様もご一緒にお越しいただけます。人数とお子様の年齢を、お返事のメッセージ欄にご記入ください。</p></details>
   <details class="rv"><summary>お問い合わせ</summary><p>ご不明な点がございましたら、お手数ですが新郎新婦までご連絡ください。</p></details>
