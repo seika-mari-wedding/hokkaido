@@ -9,7 +9,7 @@
 <meta property="og:url" content="https://seika-mari-wedding.github.io/hokkaido/">
 <meta property="og:title" content="Seika &amp; Mari — お祝いの会のご案内">
 <meta property="og:description" content="2026年11月18日（水）午後6時30分 開宴／ノーザンホースパーク Deard Buena Vista">
-<meta property="og:image" content="https://seika-mari-wedding.github.io/hokkaido/ogp.jpg?v=4">
+<meta property="og:image" content="https://seika-mari-wedding.github.io/hokkaido/ogp.jpg?v=5">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="ja_JP">
@@ -120,13 +120,14 @@ h1,h2,h3,p,dl,dd,figure{margin:0}
 .card > *:not(.card-bg){position:relative;z-index:1}
 .card > .orn{position:absolute;z-index:2}
 .card-bg{position:absolute;inset:0;z-index:0;pointer-events:none}
-.card-bg figure{margin:0;position:absolute;inset:0;opacity:0;transition:opacity 2.4s ease}
+.card-bg figure{margin:0;position:absolute;inset:0;opacity:0;transition:opacity 3s cubic-bezier(.4,0,.2,1)}
 .card-bg figure.on{opacity:1}
-.card-bg img{width:100%;height:100%;object-fit:cover;opacity:.5;filter:sepia(.12) saturate(.9);transform:scale(1.02)}
-.card-bg figure.on img{animation:kenburns 9s ease-out both}
-.card-bg figure:nth-child(even).on img{animation-name:kenburns2}
-@keyframes kenburns{from{transform:scale(1.02) translate(0,0)}to{transform:scale(1.12) translate(-2%,-1%)}}
-@keyframes kenburns2{from{transform:scale(1.12) translate(2%,1%)}to{transform:scale(1.02) translate(0,0)}}
+.card-bg img{width:100%;height:100%;object-fit:cover;opacity:.5;filter:sepia(.12) saturate(.9);
+ transform:scale(1.04);will-change:transform;animation:drift 28s ease-in-out infinite alternate}
+.card-bg figure:nth-child(2) img{animation-delay:-7s;animation-direction:alternate-reverse}
+.card-bg figure:nth-child(3) img{animation-delay:-14s}
+.card-bg figure:nth-child(4) img{animation-delay:-21s;animation-direction:alternate-reverse}
+@keyframes drift{from{transform:scale(1.04) translate3d(-1.2%,0,0)}to{transform:scale(1.13) translate3d(1.2%,-1%,0)}}
 .card-bg:after{content:"";position:absolute;inset:0;
  background:radial-gradient(ellipse 38% 62% at center,rgba(253,248,238,.9) 0,rgba(253,248,238,.78) 55%,rgba(253,248,238,.2) 100%)}
 .orn{position:absolute;width:62px;height:70px;background:url(ornament.webp) center/contain no-repeat;opacity:.9;pointer-events:none}
@@ -261,11 +262,11 @@ footer{padding:clamp(60px,9vw,96px) 0 clamp(50px,7vw,80px);text-align:center}
 <main id="main">
 <section class="hero">
   <figure class="hero-card">
-   <img class="hero-bg" src="card-bg.webp?v=4" width="2200" height="1097" fetchpriority="high"
+   <img class="hero-bg" src="card-bg.webp?v=5" width="2200" height="1097" fetchpriority="high"
     alt="Wedding Invitation Seika &amp; Mari／2026.11.18 WED／Northern Horse Park／Deard Buena Vista 18:30 Start と記された、紅葉と馬の水彩画の招待状">
-   <img class="ttl ttl-a" src="title-a.webp?v=4" alt="" aria-hidden="true" style="left:38.404%;top:18.101%;width:34.5%">
-   <img class="ttl ttl-b" src="title-b.webp?v=4" alt="" aria-hidden="true" style="left:34.527%;top:24.549%;width:43.116%">
-   <img class="ttl ttl-c" src="title-c.webp?v=4" alt="" aria-hidden="true" style="left:34.263%;top:44.069%;width:38.474%">
+   <img class="ttl ttl-a" src="title-a.webp?v=5" alt="" aria-hidden="true" style="left:35.257%;top:18.101%;width:34.5%">
+   <img class="ttl ttl-b" src="title-b.webp?v=5" alt="" aria-hidden="true" style="left:31.38%;top:24.549%;width:43.116%">
+   <img class="ttl ttl-c" src="title-c.webp?v=5" alt="" aria-hidden="true" style="left:31.116%;top:44.069%;width:38.474%">
   </figure>
   <div class="hero-under">
    <p class="hero-info"><strong>2026年11月18日（水）午後6時30分 開宴</strong>
